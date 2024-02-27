@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+        <h1 class="text-center text-info my-4"> Our Store </h1>
+        <div class="container">
+            <label class="text-info fw-bold"> Product Name </label>
+            <input id="pNameId" class="form-control mb-3">
+            <label class="text-info fw-bold"> Product Price  </label>
+            <input id="pPriceId" class="form-control mb-3">
+            <label class="text-info fw-bold"> Product Category </label>
+            <input id="pcatId" class="form-control mb-3">
+            <label class="text-info fw-bold"> Product Description </label>
+            <textarea id="pDescId" class="form-control mb-3"></textarea>
+            <button  id="addBtn"  class="btn btn-info text-white" onclick="addProduct()" > Add Product</button>
+            <button  id="saveBtn"  class="btn btn-warning text-white" onclick="saveChange()" > Save Product</button>
+        </div>
+        <div class=" container d-flex my-5 w-75">
+          <input class="form-control w-25 me-5 " placeholder="Saerch Product Name"  onkeyup="searchProductName(this.value)">
+          <input class="form-control w-25 " placeholder="Saerch Product Category"  onkeyup="searchProductCategory(this.value)">
+        </div>
+        <table class="table w-75 mx-auto" >
+          <thead class=" text-white bg-dark">
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description </th>
+            <th class="text-warning">Update Product</th>
+            <th class="text-danger">Delete Product </th>
+          </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+
+
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
